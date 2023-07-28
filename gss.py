@@ -70,7 +70,7 @@ class GSS(tf.Module):
         self.norm = tf.keras.layers.LayerNormalization(axis=-1, name="norm")
 
         # DSS
-        self.dss = DSS(hidden_size, hidden_size, name="dss")
+        self.dss = DSS(hidden_size, state_size, name="dss")
 
         # Dense layers
         self.to_v = tf.keras.layers.Dense(
